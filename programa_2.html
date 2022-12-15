@@ -1,0 +1,39 @@
+<style>
+    /* *{
+        margin: 0;
+
+    }
+    body{
+        background-color: antiquewhite;
+    } */
+</style>
+
+<canvas width="600" height="400">
+
+
+</canvas>
+
+<script>
+    var aux = 1;
+    function drawSquare(x,y, color){
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        
+        pincel.fillStyle=color;
+        pincel.fillRect(x,y,50, 50*aux);
+        
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,50*aux);
+        aux++;
+    }
+
+    drawSquare(0, 12, 'green');
+    drawSquare(50, 0, 'yellow');
+    drawSquare(100, 12, 'red');
+    drawSquare(150, 3, 'green');
+    drawSquare(200, 0, 'yellow');
+    drawSquare(250, 34, 'red');
+    drawSquare(300, 34, 'green');
+    drawSquare(350, 123, 'yellow');
+    drawSquare(400, 50, 'red');
+</script>
